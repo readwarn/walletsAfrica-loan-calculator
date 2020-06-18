@@ -27,7 +27,12 @@ function calculateLoan(){
    const calculatedInterest = parseFloat(interest.value) / 100 / 12;
    const calculatedPayments = parseFloat(duration.value) * 12;
 
-   // Compute monthly payment
+  if(principal <= 0 || calculatedInterest <= 0 || calculatedPayments <= 0) {
+    showError('Please check your inputs');
+    //Hide Loader
+    loader.style.display = 'none';
+  } else {
+    // Compute monthly payment
    const x = Math.pow(1 + calculatedInterest, calculatedPayments);
    const monthly = (principal*x*calculatedInterest)/(x-1);
 
@@ -45,6 +50,7 @@ function calculateLoan(){
       //Hide Loader
       loader.style.display = 'none';
    }
+  }
 }
 
 function showError(error){
