@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sansita&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="loan.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
@@ -44,9 +45,26 @@
          </div>
 
          <div class="px-5 py-10 form flex flex-col mt-10 md:mt-0">
-            <input type="text" class="p-3 border mb-5" placeholder="Enter loan amount in Naira">
-            <input type="text" class="p-3 border" placeholder="Loan duration">
-            <button class="px-10 py-3 mt-auto text-white">Calculate Payback Amount</button>
+             <div class="alert hidden"><p>Please fill all input</p></div>
+            <input type="text" class="p-3 border mb-5" id="loan" placeholder="Enter loan amount in Naira">
+            <input type="text" class="p-3 border" id="duration" placeholder="Loan duration">
+            <button class="px-10 py-3 mt-auto text-white calc">Calculate Payback Amount</button>
+         </div>
+
+         <div class="loan-output w-11/12 md:w-5/12 flex flex-col p-4 items-left mx-auto animate__animated hidden">
+             <i class="fa fa-times cancel ml-auto text-blue fa-2x"></i>
+             <p>Monthly Payment Required</p>
+            <div class="flex items-center"><h1 id="monthlyPay">Monthly Payment</h1><input type="text"></div>
+            <div class="flex items-center my-5"><h1 id="totalPayment">Total Payment</h1><input type="text"></div>
+            <div class="flex items-center "><h1 id="totalInterest">Total Interest</h1><input type="text"></div>
+            <button class="w-4/12 mx-auto mt-5 accept">Accept loan</button>
+            <h3>Clicking “Accept Loan” means you agree to the Terms of Payment</h3>
+         </div>
+         <div class="hidden thanks w-11/12 md:w-5/12 animate__animated flex flex-col">
+               <i class="fa fa-times t-cancel fa-2x ml-auto mb-10 text-blue"></i>
+               <p>
+                   THANKS FOR BANKING WITH US
+               </p>
          </div>
          
      </div>

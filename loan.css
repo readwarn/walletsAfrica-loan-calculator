@@ -98,5 +98,63 @@ body{
 
   .loan-output{
       position: absolute;
-      margin-left: auto;
+      background: #FFFFFF;
+      box-shadow: 2px 2px 20px rgba(88, 88, 88, 0.25);
+      border-radius: 5px;
+  }
+  
+  .loan-output p{
+    font-size: 35px;
+    line-height: 50px;
+    color: #02354E;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .loan-output input{
+    width: 70%;
+    outline: none;
+    padding: 6px;
+    border: #026799 1px solid;
+  }
+  .loan-output h1{
+    width: 25%;
+  
+  }
+  .loan-output button{
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .loan-output button:hover{
+    color: #026799;
+  }
+  .loan-output h3{
+    font-size: 18px;
+line-height: 23px;
+text-align: center;
+color: #3585AD;
+margin-top: 40px;
+  }
+
+  .thanks p{
+font-size: 64px;
+line-height: 80px;
+text-align: center;
+color: #02354E;
+z-index: 3;
+  }
+  .thanks{
+    position: absolute;
+    background: #FFFFFF;
+      box-shadow: 2px 2px 20px rgba(88, 88, 88, 0.25);
+      border-radius: 5px;
+      padding: 40px;
+  }
+
+  .alert{
+    padding: 15px;
+    border: red 1px solid;
+    text-align: center;
+    margin-bottom: 20px;
   }

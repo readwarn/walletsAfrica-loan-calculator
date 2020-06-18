@@ -5,3 +5,45 @@ $(".close").click(function (e) {
     $(".l2").toggleClass("line-2");
     $(".l3").toggleClass("line-3");
 });
+
+
+var monthlyPay=$("#monthlyPay");
+var totalPayment=$("#totalPayment");
+var totalInterest=$("#totalInterest");
+var cancel=$(".cancel");
+var calc=$(".calc");
+var output=$(".loan-output");
+var accept=$(".accept");
+var thanks=$(".thanks");
+var tc=$(".t-cancel");
+var alert1=$(".alert");
+
+calc.click(function(e){
+      var loan=$("#loan");
+      var loan1=parseInt(loan.val());
+      var duration=$("#duration");
+      var duration1=parseInt(duration.val());
+    if(isNaN(loan1)||isNaN(duration1)){
+       alert1.removeClass("hidden");
+    }
+    else{
+        output.removeClass("hidden");
+        output.addClass("animate__slideInRight");
+        alert(duration1);
+    }
+});
+cancel.click(function(e){
+    output.addClass("hidden");
+});
+
+accept.click(function(e){
+     thanks.removeClass("hidden");
+     thanks.addClass("animate__zoomIn");
+     output.addClass("hidden");
+});
+
+tc.click(function(e){
+    thanks.addClass("hidden");
+});
+
+
