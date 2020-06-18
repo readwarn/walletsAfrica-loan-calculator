@@ -17,11 +17,12 @@ var accept=$(".accept");
 var thanks=$(".thanks");
 var tc=$(".t-cancel");
 var alert1=$(".alert");
+var duration=$("#duration");
+var loan=$("#loan");
 
 calc.click(function(e){
-      var loan=$("#loan");
+
       var loan1=parseInt(loan.val());
-      var duration=$("#duration");
       var duration1=parseInt(duration.val());
     if(isNaN(loan1)||isNaN(duration1)){
        alert1.removeClass("hidden");
@@ -29,7 +30,7 @@ calc.click(function(e){
     else{
         output.removeClass("hidden");
         output.addClass("animate__slideInRight");
-        alert(duration1);
+
     }
 });
 cancel.click(function(e){
@@ -46,4 +47,11 @@ tc.click(function(e){
     thanks.addClass("hidden");
 });
 
+loan.click(function(e){
+    alert1.addClass("hidden");
+})
+
+donation.click(function(e){
+    alert1.addClass("hidden");
+})
 
