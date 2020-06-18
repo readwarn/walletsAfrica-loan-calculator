@@ -292,7 +292,7 @@ color: #02354E;
 }
 
 
-
+/* on success css code */
 body {
   margin: 0;
   padding: 0;
@@ -352,4 +352,64 @@ button {
 
 button:hover {
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+body{
+  position: relative;
+  margin: 0;
+
+  padding: 1rem;
+}
+
+.the-container{
+ /* position: absolute;
+ top: 30vh; */
+ display: flex;
+align-items: center;
+justify-content: center;
+ background: #FFFFFF;
+padding: 5rem 1rem;
+padding-top: 1rem;
+flex-direction: column;
+margin: 7rem 0;
+}
+.the-container img{
+ display: block;
+
+}
+.the-container .close-icon{
+align-self: flex-end;
+
+ margin-bottom: 1rem;
+}
+.verified{
+border: 3px solid #029908;
+border-radius: 50%;
+padding: .6rem;
+}
+
+.the-container h2{
+color: #02354E;
+margin-top: 2.5rem;
+margin-bottom: 0;
+}
+.the-container p{
+color: #3585AD;
+margin-top: 0.2rem;
+}
+.the-container button{
+ background-color: #026799;
+ border-style: none;
+ padding: .6rem 3rem;
+ color: white;
+}
+
+@media(min-width: 600px){
+ .the-container{
+     margin: 7rem auto;
+     max-width: 280px;
+ }
+.the-container .close-icon{
+  align-self: center;
+  margin-left: 17rem;
+}
 }
