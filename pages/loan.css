@@ -76,7 +76,7 @@ body{
   }
 
   .bg{
-      background: url(./assets/img/loan.png);   
+      background: url(../assets/img/loan.png);   
       height: 200px;
       background-size: contain;
       position: absolute;
