@@ -46,17 +46,18 @@
 
          <div class="px-5 py-10 form flex flex-col mt-10 md:mt-0">
              <div class="alert hidden"><p>Please fill all input</p></div>
-            <input type="text" class="p-3 border mb-5" id="loan" placeholder="Enter loan amount in Naira">
-            <input type="text" class="p-3 border" id="duration" placeholder="Loan duration">
+            <input type="text" class="p-3 border" id="loan" placeholder="Enter loan amount in Naira">
+            <input type="text" class="p-3 border my-5" id="duration" placeholder="Loan duration">
+            <input type="text" class="p-3 border" id="interest" placeholder="Loan Interest">
             <button class="px-10 py-3 mt-auto text-white calc">Calculate Payback Amount</button>
          </div>
 
          <div class="loan-output w-11/12 md:w-5/12 flex flex-col p-4 items-left mx-auto animate__animated hidden">
              <i class="fa fa-times cancel ml-auto text-blue fa-2x"></i>
              <p>Monthly Payment Required</p>
-            <div class="flex items-center"><h1 id="monthlyPay">Monthly Payment</h1><input type="text"></div>
-            <div class="flex items-center my-5"><h1 id="totalPayment">Total Payment</h1><input type="text"></div>
-            <div class="flex items-center "><h1 id="totalInterest">Total Interest</h1><input type="text"></div>
+            <div class="flex items-center"><h1>Monthly Payment</h1><input type="text" id="monthlyPay"></div>
+            <div class="flex items-center my-5"><h1>Total Payment</h1><input type="text"  id="totalPayment"></div>
+            <div class="flex items-center "><h1>Total Interest</h1><input type="text" id="totalInterest"></div>
             <button class="w-4/12 mx-auto mt-5 accept">Accept loan</button>
             <h3>Clicking “Accept Loan” means you agree to the Terms of Payment</h3>
          </div>
